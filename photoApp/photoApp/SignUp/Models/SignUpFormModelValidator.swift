@@ -12,7 +12,7 @@ class SignUpFormModelValidator {
     
     func isFirstNameValid(firstName: String) -> Bool{
         var returnValue = true
-        if firstName.isEmpty || firstName.count < 2 || firstName.count > 10 {
+        if firstName.isEmpty || firstName.count < SignUpConstants.firstNameMinLength || firstName.count > SignUpConstants.firstNameMaxLength {
             returnValue = false
         }
         return returnValue
@@ -20,7 +20,7 @@ class SignUpFormModelValidator {
     
     func isLastNameValid(lastName: String) -> Bool {
         var returnValue = true
-        if lastName.isEmpty || lastName.count < 2 || lastName.count > 10 {
+        if lastName.isEmpty || lastName.count < SignUpConstants.lastNameMinLength || lastName.count > SignUpConstants.lastNameMaxLength {
             returnValue = false
         }
         return returnValue
